@@ -1,0 +1,29 @@
+body {
+	background-color: #C9EAF6;
+}
+
+#bookcontainer { /* Container of phonebook and other elements */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	height: 700px;
+	background-color: none;
+	border: none;
+}
+
+#book {
+	position: relative;
+	transform: translate(-50%, -50);
+	width: 500px;
+	height: 700px;
+	background-color: none;
+	border: none;
+}
+
+.entry {
+	width: 900px;
+}
+
+
