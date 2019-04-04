@@ -9,7 +9,7 @@ body {
 	transform: translate(-50%, -50%);
 	width: 500px;
 	height: 700px;
-	background-color: none;
+	background-color: white;
 	border: none;
 }
 
@@ -78,8 +78,71 @@ select.frmInput {
 
 #vcard_namegreet {
 	position: absolute;
-	top: 5px;
-	left: 12px;
-	color: #FFB9AA;
+	top: 18px;
+	left: 18px;
+	color: #9BD0E4;
 	font-size: 40px;
 }
+
+#vcard_namegreet_hello {
+	font-size: 34px;
+	color: #FFDC87;
+}
+
+#info_holder {
+	position: absolute;
+	top: 105px;
+	left: 20px;
+	font-size: 18px;
+}
+
+.vcard_title {
+	height: 30px;
+	width: 100px;
+	color: #FF9B87;
+}
+
+.vcard_val {
+	color: #FF9C87;
+}
+
+#vcard_buttons {
+	position: absolute;
+	top: 290px;
+	left: 20px;
+	height: 50px;
+	width: 260px;
+	background-color: none;
+}
+
+#vcard_edit {
+	position: absolute;
+	height: 45;
+	width: 110px;
+	left: 10px;
+	background-color: #9BD0E4;
+	border-radius: 8px;
+}
+
+#vcard_delete {
+	position: absolute;
+	background-color: #ff4000;
+	height: 45px;
+	width: 110px;
+	left: 140;
+	border-radius: 8px;
+}
+
+#bback {
+	position: absolute;
+	top: 355px;
+	left: 16px;
+	font-size: 28px;
+}
+
+a:link {
+	color: red;
+	text-decoration: none;
+}
+
+

@@ -6,7 +6,6 @@ if($_GET['view']) {
 	exit;
 }
 
-$fetch; //here: to remove
 $csvData = [];
 
 $csvops = new filecsv();
@@ -14,8 +13,6 @@ $csvops = new filecsv();
 if($_GET['frm_fname']) {
 	$csvops->writecontact();
 }
-
-$fetch = file_get_contents('contact.csv'); //here: to remove
 
 
 ?>
@@ -46,7 +43,7 @@ $fetch = file_get_contents('contact.csv'); //here: to remove
 
 	<tbody>
 	<!--thi is foreach-->
-	<?php foreach(explode("\n", $fetch) as $fetchedLine): ?> <!-- here: in fetch -->
+	<?php foreach(explode("\n", $csvops->fetchcsv()) as $fetchedLine): ?>
 <?php echo $csvops->csv_contents; ?> <!-- This is  test -->
 	<?php [$fl_fname, $fl_lname, $fl_gender, $fl_birthdate, $fl_number, $fl_id] = explode(',', $fetchedLine); ?>
 		
@@ -78,7 +75,6 @@ $fetch = file_get_contents('contact.csv'); //here: to remove
 </div>
 
 </div>
-
 
 
 

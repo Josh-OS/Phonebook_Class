@@ -15,7 +15,6 @@ class filecsv {
 	public function fetchcsv() {
 		$fetch;
 		$fetch = file_get_contents('contact.csv');
-		var_dump($fetch);
-		$this->csv_contents =$fetch;
+		return $fetch;
 	}
 }
