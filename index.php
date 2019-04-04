@@ -1,5 +1,23 @@
 <?php
 include_once('phonelib.php');
+
+if($_GET['view']) {
+	require('contact_view.php');
+	exit;
+}
+
+$fetch; //here: to remove
+$csvData = [];
+
+$csvops = new filecsv();
+
+if($_GET['frm_fname']) {
+	$csvops->writecontact();
+}
+
+$fetch = file_get_contents('contact.csv'); //here: to remove
+
+
 ?>
 <!DOCTYPE Html>
 
@@ -17,8 +35,7 @@ include_once('phonelib.php');
 <table class="entry">
 	<thead>
 		<tr>
-		<th></th>
-		<th style="background-color: yellow;">Firstname</th>
+		<th>Firstname</th>
 		<th>Lastname</th>
 		<th>Gender</th>
 		<th>Birthdate</th>
@@ -27,15 +44,35 @@ include_once('phonelib.php');
 	<thead>
 
 
-	<!--thi is foreach-->
 	<tbody>
+	<!--thi is foreach-->
+	<?php foreach(explode("\n", $fetch) as $fetchedLine): ?> <!-- here: in fetch -->
+<?php echo $csvops->csv_contents; ?> <!-- This is  test -->
+	<?php [$fl_fname, $fl_lname, $fl_gender, $fl_birthdate, $fl_number, $fl_id] = explode(',', $fetchedLine); ?>
+		
+		<div color="red">
 		<tr>
-		<td class="tllist"></th>
-		<td class="tllist">Jesson</td>
-		<td class="tllist">Jamola</td>
-		<td class="tllist">Male</td>
-		<td class="tllist">October</td>
-		<td class="tllist">d09382637283</td>
+		<td class="tlItem"><a class="tllink" href="?view=<?php echo $fl_id; ?>"><?php echo "$fl_fname"; ?></a></td>
+		<td class="tlItem"><?php echo "$fl_lname"; ?></td>
+		<td class="tlItem"><?php echo "$fl_gender"; ?></td>
+		<td class="tlItem"><?php echo "$fl_birthdate"; ?></td>
+		<td class="tlItem"><?php echo "$fl_number"; ?></td>
+		</tr>
+		</div>
+	
+	<?php endforeach; ?>
+		<tr>
+		<form action="" method="GET">
+		<td class="tlItem"><input class="frmInput" type="text" name="frm_fname" placeholder="Firstname"></td>
+		<td class="tlItem"><input class="frmInput" type="text" name="frm_lname" placeholder="Lastname"></td>
+		<td class="tlItem"><select class="frmInput" name="frm_gender">
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</td>
+		<td class="tlItem"><input class="frmInput" type="date" name="frm_birthdate" placeholder="Birthdate"></td>
+		<td class="tlItem"><input class="frmInput" type="text" name="frm_number" placeholder="Mobile number"></td>
+		<input class="frmInput" type="submit"/>
+		</form>
 		</tr>
 	</tbody>
 </div>

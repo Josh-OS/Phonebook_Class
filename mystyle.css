@@ -23,7 +23,63 @@ body {
 }
 
 .entry {
-	width: 900px;
+	width: 670px;
+	text-align: left;
+	border: none;
+	border-collapse: collapse;
+	top-border: 1px;
+}
+
+.tlItem {
+	height: 30px;
+	width: 400px;
+	background-color: white;
+	right-border: none;
+}
+
+input[type=text].frmInput {
+	width: 115px;
+	margin: none;
+	border: none;
+}
+
+input[type=date].frmInput {
+	margin: none;
+	border: none;
+}
+
+input[type=submit].frmInput {
+	display: none;
+}
+
+select.frmInput {
+	border: 0px;
+	outline: 0px;
+}
+
+.tllink {
+	text-decoration: none;
+	color: none;
 }
 
 
+/* contact_view.php */
+#vcard {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 400px;
+	width: 300px;
+	background-color: white;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 20px
+}
+
+#vcard_namegreet {
+	position: absolute;
+	top: 5px;
+	left: 12px;
+	color: #FFB9AA;
+	font-size: 40px;
+}
