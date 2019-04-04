@@ -6,6 +6,10 @@ if($_GET['view']) {
 	exit;
 }
 
+if($_GET['delete']) {
+	echo $_GET['delete'];
+}
+
 $csvData = [];
 
 $csvops = new filecsv();

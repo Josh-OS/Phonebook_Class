@@ -1,6 +1,12 @@
 <?php
 include_once('phonelib.php');
 
+$contact_delete = new delcv();
+/* ENDED HERE
+if($_GET['delete']) {
+	$contact_delete->deleteById($_GET['delete']);
+}
+ */
 $search_user = [];
 $fetch;
 $fetch = file_get_contents('contact.csv');
@@ -13,7 +19,8 @@ foreach(explode("\n", $fetch) as $line) {
 			'su_lname' => $str_lname,
 			'su_gnder' => $str_gnder,
 			'su_bday' => $str_bday,
-			'su_number' => $str_number
+			'su_number' => $str_number,
+			'su_id' => $str_id
 		];
 	}
 }
@@ -64,8 +71,8 @@ foreach(explode("\n", $fetch) as $line) {
 
 
 	<div id="vcard_buttons">
-		<span id="vcard_edit">EDIT</span>
-		<span id="vcard_delete">DELETE</span>
+		<a href="?edit=<?php echo $search_user['su_id']; ?>" class="vcardbtn"><span id="vcard_edit">EDIT</span></a>
+		<a href="?delete=<?php echo $search_user['su_id']; ?>"  class="vcardbtn"><span id="vcard_delete">DELETE</span></a>
 	</div>
 
 <span id="bback"><strong><a href="index.php"><</a></strong></span>
