@@ -69,7 +69,7 @@ foreach(explode("\n", $fetch) as $line) {
 				<input type="hidden" name="frmEdit_id" value="<?php echo $search_user['id']; ?>">
 				<div id="vcard_buttons">
 					 <a href="index.php" class="vcardbtn"><span id="vcard_edit">CANCEL</span></a>
-               			         <input type="submit" id=vcard_delete" class="save" value="save">
+               			         <input type="submit" class="save" value="SAVE">
         		        </div>
 		
 			</form>
