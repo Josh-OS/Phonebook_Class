@@ -26,57 +26,57 @@ foreach(explode("\n", $fetch) as $line) {
 }
 ?>
 <html>
-<head>
-<title>Details</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-</head>
+	<head>
+		<title>Details</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
 
 <body>
 
-<div id="vcard">
+	<div id="vcard">
 
-	<span id="vcard_namegreet">
-	<span id="vcard_namegreet_hello"><sup>Hello</sup> </span><?php echo $search_user['su_fname'] ?>
-	</span>
+		<span id="vcard_namegreet">
+		<span id="vcard_namegreet_hello"><sup>Hello</sup> </span><?php echo $search_user['su_fname'] ?>
+		</span>
 
 
-	<table id="info_holder">
+		<table id="info_holder">
 		
-		<tr>
-		<td class="vcard_title">Name:</td>
-		<td class="vcard_val"><?php echo $search_user['su_fname']; ?></td>
-		</tr>
+			<tr>
+				<td class="vcard_title">Name:</td>
+				<td class="vcard_val"><?php echo $search_user['su_fname']; ?></td>
+			</tr>
 
-		<tr>
-		<td class="vcard_title">Surname:</td>
-		<td class="vcard_val"><?php echo $search_user['su_lname']; ?></td>
-		</tr>
+			<tr>
+				<td class="vcard_title">Surname:</td>
+				<td class="vcard_val"><?php echo $search_user['su_lname']; ?></td>
+			</tr>
 
-		<tr>
-		<td class="vcard_title">Gender:</td>
-		<td class="vcard_val"><?php echo $search_user['su_gnder'];  ?></td>
-		</tr>
+			<tr>
+				<td class="vcard_title">Gender:</td>
+				<td class="vcard_val"><?php echo $search_user['su_gnder'];  ?></td>
+			</tr>
 
-		<tr>
-		<td class="vcard_title">Birthdate</td>
-		<td class="vcard_val"><?php echo $search_user['su_bday'];  ?></td>
-		</tr>
+			<tr>
+				<td class="vcard_title">Birthdate</td>
+				<td class="vcard_val"><?php echo $search_user['su_bday'];  ?></td>
+			</tr>
 
-		<tr>
-		<td class="vcard_title">Number:</td>
-		<td class="vcard_val"><?php echo $search_user['su_number'];  ?></td>
-		</tr>
+			<tr>
+				<td class="vcard_title">Number:</td>
+				<td class="vcard_val"><?php echo $search_user['su_number'];  ?></td>
+			</tr>
 		
-	</table>
+		</table>
 
 
-	<div id="vcard_buttons">
-		<a href="?edit=<?php echo $search_user['su_id']; ?>" class="vcardbtn"><span id="vcard_edit">EDIT</span></a>
-		<a href="?delete=<?php echo $search_user['su_id']; ?>"  class="vcardbtn"><span id="vcard_delete">DELETE</span></a>
+		<div id="vcard_buttons">
+			<a href="?edit=<?php echo $search_user['su_id']; ?>" class="vcardbtn"><span id="vcard_edit">EDIT</span></a>
+			<a href="?delete=<?php echo $search_user['su_id']; ?>"  class="vcardbtn"><span id="vcard_delete">DELETE</span></a>
+		</div>
+
+		<span id="bback"><strong><a href="index.php"><</a></strong></span>
 	</div>
-
-<span id="bback"><strong><a href="index.php"><</a></strong></span>
-</div>
 	
 
 </body>

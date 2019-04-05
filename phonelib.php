@@ -30,14 +30,14 @@ class delcv {
 		$tasks = [];
 
 		foreach($rows as $field) {
-			[$fl_fname, $fl_lname, $fl_gender, $fl_birthdate, $fl_number, $id] = explode(",", $field);
+			[$fileLine_fname, $fileLine_lname, $fileLine_gender, $fileLine_birthdate, $fileLine_number, $id] = explode(",", $field);
 
 			$tasks[] = [
-				'su_fname' => $str_fname,
-				'su_lname' => $str_lname,
-				'su_gnder' => $str_gnder,
-				'su_bday' => $str_bday,
-				'su_number' => $str_number,
+				'fname' => $fileLine_fname,
+				'lname' => $fileLine_lname,
+				'gnder' => $fileLine_gender,
+				'bday' => $fileLine_birthdate,
+				'number' => $fileLine_number,
 				'id' => $id
 			];
 		}
@@ -48,7 +48,7 @@ class delcv {
 	public function exportFile($contents)
 	{
 		$rows = null;
-
+		$contents = $contents;
 		foreach($contents as $content) {
 			if ($content['id']) {
 				$field .= implode(',', $content) . "\n";
