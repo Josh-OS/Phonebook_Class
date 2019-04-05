@@ -12,6 +12,11 @@ if($_GET['delete']) {
 	$deleteops->deleteById($_GET['delete']);
 }
 
+if($_GET['edit']) {
+	require('contact_edit.php');
+	exit;
+}
+
 $csvData = [];
 
 
@@ -19,6 +24,10 @@ if($_GET['frm_fname']) {
 	$csvops->writecontact();
 }
 
+if($_GET['frmEdit_id']) {
+	$deleteops->deleteById($_GET['frmEdit_id']);
+	$csvops->writecontact();
+}
 
 ?>
 <!DOCTYPE Html>

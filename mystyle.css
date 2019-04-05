@@ -138,6 +138,11 @@ select.frmInput {
 	line-height: 45px;
 }
 
+.vcard_input {
+	width: 140px;
+	color: #FF9B87;
+}
+
 #bback {
 	position: absolute;
 	top: 355px;
@@ -159,3 +164,13 @@ a:link {
 	text-decoration: none;
 }
 
+input[type=submit].save {
+	position: absolute;
+        background-color: #ff4000;
+        height: 45px;
+        width: 110px;
+        left: 140;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 45px;
+}
