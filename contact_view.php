@@ -75,7 +75,7 @@ foreach(explode("\n", $fetch) as $line) {
 			<a href="?delete=<?php echo $search_user['id']; ?>"  class="vcardbtn"><span id="vcard_delete">DELETE</span></a>
 		</div>
 
-		<span id="bback"><strong><a href="index.php"><</a></strong></span>
+		<span id="bback"><strong><a href="index.php" id="backbtn"><</a></strong></span>
 	</div>
 	
 

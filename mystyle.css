@@ -309,6 +309,16 @@ select.frmInput {
 	font-size: 28px;
 }
 
+a:link#backbtn {
+	text-decoration: none;
+	color: lightgray;
+}
+
+a:visited#backbtn {
+	text-decoration: none;
+	color: lightgray;
+}
+
 a:link.vcardbtn {
 	color: white;
 	text-decoration: none;
