@@ -38,14 +38,86 @@ body {
 	border: none;
 }
 
+.spanSlice_head {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	background-color: gray;
+	margin: 10px;
+	color: white;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .spanSlice {
 	position: relative;
 	display: block;
 	width: 100%;
 	height: 60px;
 	background-color: white;
-	margin: 10px;
+	margin: 8px;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
+
+.spanSlice_head_fname {
+	position: absolute;
+	left: 0;
+	width: 191px;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	background-color: none;
+	border: none;
+	padding: 0 0 0 30px;
+}
+
+.spanSlice_head_lname {
+	position: absolute;
+	left: 221px;
+	width: 191px;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	background-color: none;
+	border: none;
+	padding: 0 0 0 30px;
+}
+
+.spanSlice_head_gender {
+	position: absolute;
+	left: 442px;
+	width: 80px;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	background-color: none;
+	border: none;
+	padding: 0 0 0 20px;
+}
+
+.spanSlice_head_bday {
+	position: absolute;
+	left: 542px;
+	width: 191px;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	background-color: none;
+	border: none;
+	padding: 0 0 0 30px;
+}
+
+.spanSlice_head_num {
+	position: absolute;
+	left: 763px;
+	width: 174px;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	background-color: none;
+	border: none;
+	padding: 0 0 0 30px;
 }
 
 .spanSlice_colmn_fname {
@@ -56,8 +128,9 @@ body {
 	line-height: 60px;
 	text-align: left;
 	background-color: none;
-	border: solid 1px;
+	border: 1px;
 	padding: 0 0 0 30px;
+	color: #FF9B87;
 }
 
 .spanSlice_colmn_lname {
@@ -68,8 +141,9 @@ body {
 	line-height: 60px;
 	text-align: left;
 	background-color: none;
-	border: solid 1px;
+	border: 1px;
 	padding: 0 0 0 30px;
+	color: #FF9B87;
 }
 
 .spanSlice_colmn_gender {
@@ -80,8 +154,9 @@ body {
 	line-height: 60px;
 	text-align: left;
 	background-color: none;
-	border: solid 1px;
+	border: 1px;
 	padding: 0 0 0 20px;
+	color: #FF9B87;
 }
 
 .spanSlice_colmn_bday {
@@ -92,8 +167,9 @@ body {
 	line-height: 60px;
 	text-align: left;
 	background-color: none;
-	border: solid 1px;
+	border: 1px;
 	padding: 0 0 0 30px;
+	color: #FF9B87;
 }
 
 .spanSlice_colmn_num {
@@ -104,10 +180,25 @@ body {
 	line-height: 60px;
 	text-align: left;
 	background-color: none;
-	border: solid 1px;
+	border: 1px;
 	padding: 0 0 0 30px;
+	color: #FF9B87;
 }
 
+a:link.tllink  {
+	color: black;
+	text-decoration: none;
+}
+
+a:visited.tllink  {
+	color: black;
+	text-decoration: none;
+}
+
+a:active.tllink {
+	color: black;
+	text-decoration: none;
+}
 
 input[type=text].frmInput {
 	width: 115px;
@@ -129,10 +220,6 @@ select.frmInput {
 	outline: 0px;
 }
 
-.tllink {
-	text-decoration: none;
-	color: none;
-}
 
 
 /* contact_view.php */
@@ -272,4 +359,4 @@ input[type=date].vcard_input {
 select.vcard_input {
 	border: 0px;
 	outline: 0px;
-}
+
