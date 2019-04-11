@@ -7,7 +7,7 @@ body {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: 500px;
+	width: 970px;
 	height: 700px;
 	background-color: none;
 	border: none;
@@ -16,26 +16,98 @@ body {
 #book {
 	position: relative;
 	transform: translate(-50%, -50);
-	width: 500px;
+	width: 970px;
 	height: 700px;
 	background-color: none;
 	border: none;
 }
 
-.entry {
-	width: 670px;
+.contactlist {
+	width: 970px;
 	text-align: left;
 	border: none;
-	border-collapse: collapse;
+	border-collapse: separate; /* it must be collapse */
 	top-border: 1px;
 }
 
+
 .tlItem {
 	height: 30px;
-	width: 400px;
 	background-color: white;
 	right-border: none;
+	border: none;
 }
+
+.spanSlice {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	margin: 10px;
+
+}
+
+.spanSlice_colmn_fname {
+	position: absolute;
+	left: 0;
+	width: 191px;
+	height: 60px;
+	line-height: 60px;
+	text-align: left;
+	background-color: none;
+	border: solid 1px;
+	padding: 0 0 0 30px;
+}
+
+.spanSlice_colmn_lname {
+	position: absolute;
+	left: 221px;
+	width: 191px;
+	height: 60px;
+	line-height: 60px;
+	text-align: left;
+	background-color: none;
+	border: solid 1px;
+	padding: 0 0 0 30px;
+}
+
+.spanSlice_colmn_gender {
+	position: absolute;
+	left: 442px;
+	width: 80px;
+	height: 60px;
+	line-height: 60px;
+	text-align: left;
+	background-color: none;
+	border: solid 1px;
+	padding: 0 0 0 20px;
+}
+
+.spanSlice_colmn_bday {
+	position: absolute;
+	left: 542px;
+	width: 191px;
+	height: 60px;
+	line-height: 60px;
+	text-align: left;
+	background-color: none;
+	border: solid 1px;
+	padding: 0 0 0 30px;
+}
+
+.spanSlice_colmn_num {
+	position: absolute;
+	left: 763px;
+	width: 174px;
+	height: 60px;
+	line-height: 60px;
+	text-align: left;
+	background-color: none;
+	border: solid 1px;
+	padding: 0 0 0 30px;
+}
+
 
 input[type=text].frmInput {
 	width: 115px;
